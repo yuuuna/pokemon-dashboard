@@ -1,0 +1,24 @@
+// 背景顏色
+$bg-primary: steelblue;
+
+// 文字顏色
+$fc-primary: white;
+$fc-primary-h: blanchedalmond;
+
+// 文字大小
+$fs-base: 4px;
+
+// 間距
+$spacer: 4px;
+
+// breakpoint
+$breakpoints: ("lg", "md", "pad", "sm", "xs");
+
+// text-align
+$text-align: ("left", "right", "center");
+
+// position
+$position: ("staic", "relative", "absolute", "fixed", "sticky");
+
+// display
+$display: ("inline", "inline-block", "block", "flex", "inline-flex", "none");
