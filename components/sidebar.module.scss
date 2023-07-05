@@ -1,0 +1,24 @@
+@import "../styles/variables";
+@import "../styles/mixin";
+
+.header {
+    height: 100px;
+    .logo {
+        @include flex(center);
+        height: 50px;
+    }
+    .menu {
+        height: 50px;
+        @include flex(center, row, center);
+        .menuItem {
+            @include flex(center);
+            width:100px;
+            font-size: 1.25rem;
+            cursor: pointer;
+            color: $fc-primary;
+            &:hover {
+                color: $fc-primary-h;
+            }
+        }
+    }
+}
