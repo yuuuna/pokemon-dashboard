@@ -2,11 +2,6 @@ import Layout from "@/components/layout";
 import { useCallback, useEffect, useState } from "react";
 import styles from './pokedex.module.scss';
 
-class Pokemon {
-  name: string = '';
-  id: number = 0;
-}
-
 // 取得到清單資料，後續可考慮帶入世代，並抽出去
 function GetData() {
 
@@ -21,16 +16,16 @@ function GetData() {
     return data;
   };
 
-  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+  const [pokemons, setPokemons] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const gridData = useCallback(() => {
     setPokemons([]);
     setIsLoading(true);
     fetchPokemonList().then(async (data) => {
-      const lists: Pokemon[] = [];
+      const lists: any[] = [];
 
-      await Promise.all(data.results.map(async (pokemon: Pokemon) => {
+      await Promise.all(data.results.map(async (pokemon: any) => {
         const p = await fetchPokemonData(pokemon.name);
         lists[p.id] = p;
       }));
@@ -55,13 +50,18 @@ export default function Pokedex() {
   const { pokemons, isLoading } = GetData();
   // TODO: Loading 做個圖片呈現
   if (isLoading) {
-    return null;
+    return <>Loading...</>;
   }
+  console.log(pokemons);
   const pokemonData = pokemons.map(function (pokemon) {
     return (
-      <div className={styles.card} key={pokemon.id}>
-        {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-        <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/" + pokemon.id + ".svg"} alt={pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)} />
+      <div className={styles.card + ` type-${pokemon.types[0].type.name}`} key={pokemon.id}>
+        <div className={styles.cardTitle}>
+          {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+        </div>
+        <div className={styles.cardImage}>
+          <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/" + pokemon.id + ".svg"} alt={pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)} />
+        </div>
       </div>
     )
   });
