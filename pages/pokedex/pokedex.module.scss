@@ -1,0 +1,13 @@
+@import "../../styles/mixin";
+
+.cardArea {
+    @include flex(center);
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30%;
+    img {
+        max-width: 50%;
+    }
+}

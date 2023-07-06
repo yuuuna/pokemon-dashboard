@@ -10,9 +10,9 @@ export default function Sidebar() {
           {/* TODO: 製作 LOGO */}
         </div>
         <div className={styles.menu}>
-          <Link href="/" className={styles.menuItem}>
+          {/* <Link href="/" className={styles.menuItem}>
             首頁
-          </Link>
+          </Link> */}
           <Link href="/pokedex" className={styles.menuItem}>
             Pokédex
           </Link>
