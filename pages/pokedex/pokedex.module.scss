@@ -1,6 +1,20 @@
 @import "../../styles/variables";
 @import "../../styles/mixin";
 
+.area {
+    @include flex(center, column, center);
+    .areaList {
+        @include flex;
+        .areaItem {
+            margin: 0 1rem;
+            cursor: pointer;
+            &:hover {
+                color: $fc-primary-h;
+            }
+        }
+    }
+}
+
 .cardArea {
     @include flex(center);
     flex-wrap: wrap;
@@ -13,6 +27,7 @@
     margin: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 1rem;
     box-shadow: 0px 0px 10px var(--color);
+    // TODO: 想要多個每個屬性背景圖
     .cardTitle {
         color: $fc-white;
     }
