@@ -64,7 +64,7 @@ export default function Pokedex() {
           {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
         </div>
         <div className={styles.cardImage}>
-          <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/" + (pokemon.id < 650 ?"dream-world" : "official-artwork") + "/" + pokemon.id + (pokemon.id < 650 ?".svg" : ".png")} alt={pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)} />
+          <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/" + (pokemon.id < 650 ? "dream-world" : "official-artwork") + "/" + pokemon.id + (pokemon.id < 650 ? ".svg" : ".png")} alt={pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)} />
         </div>
       </div>
     )
@@ -75,7 +75,7 @@ export default function Pokedex() {
       <div className={styles.area}>
         <div>地區</div>
         <div className={styles.areaList}>
-          {/* TODO: 改迴圈 */}
+          {/* TODO: 改迴圈 & 增加圖鑑 icon */}
           <div className={styles.areaItem} onClick={() => ReGetData({ a: 0, b: 151 })}>關東</div>
           <div className={styles.areaItem} onClick={() => ReGetData({ a: 151, b: 100 })}>城都</div>
           <div className={styles.areaItem} onClick={() => ReGetData({ a: 251, b: 135 })}>豐原</div>

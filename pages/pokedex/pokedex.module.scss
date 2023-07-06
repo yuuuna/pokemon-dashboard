@@ -1,6 +1,8 @@
 @import "../../styles/variables";
 @import "../../styles/mixin";
 
+// TODO: RWD
+
 .area {
     @include flex(center, column, center);
     .areaList {
@@ -22,14 +24,20 @@
 
 .card {
     @include flex(center, column, center);
-    width: 15%;
+    width: 20%;
     background-color: var(--color);
     margin: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 1rem;
     box-shadow: 0px 0px 10px var(--color);
-    // TODO: 想要多個每個屬性背景圖
+    cursor: pointer;
+    opacity: 0.8;
+    &:hover {
+        opacity: 1;
+    }
+    // TODO: 想要每個屬性背景圖
     .cardTitle {
         color: $fc-white;
+        margin: 0.5rem 0rem;
     }
     .cardImage {
         @include flex(center);
