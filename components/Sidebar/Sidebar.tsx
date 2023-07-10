@@ -9,17 +9,17 @@ export default function Sidebar() {
           Pokémon Dashboard
           {/* TODO: 製作 LOGO */}
         </div>
-        <div className={styles.menu}>
-          {/* <Link href="/" className={styles.menuItem}>
+        {/* <div className={styles.menu}>
+          <Link href="/" className={styles.menuItem}>
             首頁
-          </Link> */}
-          <Link href="/pokedex" className={styles.menuItem}>
+          </Link>
+          <Link href="/Pokedex/index" className={styles.menuItem}>
             Pokédex
           </Link>
           <Link href="/about" className={styles.menuItem}>
             關於我
           </Link>
-        </div>
+        </div> */}
       </header>
     </>
   )

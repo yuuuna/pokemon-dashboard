@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
-import styles from './pokedex.module.scss';
-import { Card } from '../../components/Card';
+import styles from './Pokedex.module.scss';
+import { Card } from '@/components/Card';
 
 export default function Pokedex() {
 
