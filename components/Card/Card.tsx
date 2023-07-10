@@ -28,9 +28,7 @@ function GetPokemonImg(id: number) {
   return srcUrl;
 }
 
-// FIXME: 正確應該直接使用 {pokemon, xxx}，但這邊 eslint 過不了
-export default function Card(prop: any) {
-  const pokemon = prop.pokemon;
+export default function Card({ pokemon }: any) {
   if (!pokemon) {
     return null;
   }

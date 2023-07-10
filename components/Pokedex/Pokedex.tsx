@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import styles from './Pokedex.module.scss';
 import { Card } from '../Card';
+import { fetchPokemonList, fetchPokemonData } from '@/src/api';
 
 export default function Pokedex() {
 
@@ -15,24 +16,15 @@ export default function Pokedex() {
   }
 
   function GetData() {
-    const fetchPokemonList = async () => {
-      const data = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`).then((res) => res.json());
-      return data
-    };
-
-    const fetchPokemonData = async (name: string) => {
-      const data = fetch(`https://pokeapi.co/api/v2/pokemon/${name}`).then((res) => res.json());
-      return data;
-    };
-
     const gridData = useCallback(async () => {
       setPokemonsList([]);
       setIsSuccess(true);
-      await fetchPokemonList().then(async (data) => {
+      await fetchPokemonList({offset: offset, limit: limit}).then(async (data) => {
         const lists: any[] = [];
 
         await Promise.all(data.results.map(async (pokemon: any) => {
-          const p = await fetchPokemonData(pokemon.name);
+          const name = pokemon.name.toString();
+          const p = await fetchPokemonData({name: name});
           lists[p.id] = p;
         }));
         setPokemonsList(lists);
@@ -54,18 +46,16 @@ export default function Pokedex() {
   const { pokemons, isLoading } = GetData();
 
   // TODO: Loading 做個圖片呈現
+  let pokemonData;
   if (isLoading) {
-    return (
-      <>
-        Loading ...
-      </>
-    );
+    pokemonData = 'Loading ...';
+  } else {
+    pokemonData = pokemons.map(function (pokemon) {
+      return (
+        <Card pokemon={pokemon} key={pokemon.id} />
+      )
+    });
   }
-  const pokemonData = pokemons.map(function (pokemon) {
-    return (
-      <Card pokemon={pokemon} key={pokemon.id} />
-    )
-  });
 
   return (
     <>
