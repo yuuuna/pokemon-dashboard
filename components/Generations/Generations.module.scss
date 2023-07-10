@@ -1,0 +1,21 @@
+@import "@/styles/variables";
+@import "@/styles/mixin";
+
+.area {
+    @include flex(center, column, center);
+    .areaList {
+        @include flex;
+        .areaItem {
+            margin: 0 1rem;
+            cursor: pointer;
+            &:hover {
+                color: $fc-primary-h;
+            }
+
+            &.clicked {
+                color: red;
+                text-decoration: underline;
+            }
+        }
+    }
+}

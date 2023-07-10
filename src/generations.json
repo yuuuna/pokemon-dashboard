@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "關東",
+        "offset": 0,
+        "limit": 151
+    },
+    {
+        "id": 2,
+        "name": "城都",
+        "offset": 151,
+        "limit": 100
+    },
+    {
+        "id": 3,
+        "name": "豐原",
+        "offset": 251,
+        "limit": 135
+    },
+    {
+        "id": 4,
+        "name": "神奧",
+        "offset": 386,
+        "limit": 107
+    },
+    {
+        "id": 5,
+        "name": "合眾",
+        "offset": 493,
+        "limit": 156
+    },
+    {
+        "id": 6,
+        "name": "卡洛斯",
+        "offset": 649,
+        "limit": 72
+    },
+    {
+        "id": 7,
+        "name": "阿羅拉",
+        "offset": 721,
+        "limit": 88
+    },
+    {
+        "id": 8,
+        "name": "伽勒爾",
+        "offset": 809,
+        "limit": 89
+    },
+    {
+        "id": 9,
+        "name": "洗翠",
+        "offset": 898,
+        "limit": 7
+    },
+    {
+        "id": 10,
+        "name": "怕底亞",
+        "offset": 905,
+        "limit": 105
+    }
+]
