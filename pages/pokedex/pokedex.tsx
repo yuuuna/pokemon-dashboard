@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import styles from './pokedex.module.scss';
+import { Card } from '../../components/Card';
 
 export default function Pokedex() {
 
@@ -7,7 +8,6 @@ export default function Pokedex() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [offset, setOffset] = useState(0);
   const [limit, setLimit] = useState(151);
-
 
   function ReGetData({ a = 0, b = 20 }) {
     setOffset(a);
@@ -53,34 +53,17 @@ export default function Pokedex() {
 
   const { pokemons, isLoading } = GetData();
 
-  function GetPokemonId(id: number) {
-    let idString = '';
-    if (id >= 1000) {
-      idString = id.toString();
-    } else {
-      idString = ('00' + id.toString()).substr(-3);
-    }
+  // TODO: Loading 做個圖片呈現
+  if (isLoading) {
     return (
       <>
-        #{idString}
+        Loading ...
       </>
     );
   }
-
-  // TODO: Loading 做個圖片呈現
-  const pokemonData = isLoading ? <>Loading...</> : pokemons.map(function (pokemon) {
+  const pokemonData = pokemons.map(function (pokemon) {
     return (
-      <div className={styles.card + ` type-${pokemon.types[0].type.name}`} key={pokemon.id}>
-        <div className={styles.cardIdWrap}>
-          <div className={styles.cardId}>{GetPokemonId(pokemon.id)}</div>
-        </div>
-        <div className={styles.cardTitle}>
-          {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-        </div>
-        <div className={styles.cardImage}>
-          <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/" + (pokemon.id < 650 ? "dream-world" : "official-artwork") + "/" + pokemon.id + (pokemon.id < 650 ? ".svg" : ".png")} alt={pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)} />
-        </div>
-      </div>
+      <Card pokemon={pokemon} key={pokemon.id} />
     )
   });
 
