@@ -1,4 +1,4 @@
-import Layout from "@/components/layout";
+import { Layout } from "../../components/Layout";
 import Pokedex from "./pokedex";
 
 export default function Index() {

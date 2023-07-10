@@ -1,4 +1,4 @@
-import styles from './sidebar.module.scss';
+import styles from './Sidebar.module.scss';
 import Link from 'next/link';
 
 export default function Sidebar() {

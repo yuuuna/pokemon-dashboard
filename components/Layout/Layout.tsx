@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Footer from './footer';
 import styles from './layout.module.scss';
-import Sidebar from './sidebar';
+import { Footer } from '../Footer';
+import { Sidebar } from '../Sidebar';
 
 export default function Layout({
   children,
