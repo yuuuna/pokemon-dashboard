@@ -1,4 +1,5 @@
 import styles from './Card.module.scss';
+import Image from 'next/image';
 
 /**
  * 取得 Pokemon 圖鑑編號(補 0)
@@ -33,17 +34,27 @@ export default function Card({ pokemon }: any) {
     return null;
   }
   const { name, id, types } = pokemon;
+  const pokemonName = name.charAt(0).toUpperCase() + name.slice(1);
   return (
     <>
       <div className={styles.card + ` type-${types[0].type.name}`}>
+        <div className={styles.cardTypeArea}>
+          {types.map(function (item: any) {
+            return (
+              <div className={styles.cardType} key={id + '-' + item.type.name}>
+                <Image src="/images/types/fire.png" alt="1" width="30" height="30" />
+              </div>
+            )
+          })}
+        </div>
         <div className={styles.cardIdWrap}>
           <div className={styles.cardId}>{GetPokemonId(id)}</div>
         </div>
         <div className={styles.cardTitle}>
-          {name.charAt(0).toUpperCase() + name.slice(1)}
+          {pokemonName}
         </div>
         <div className={styles.cardImage}>
-          <img src={GetPokemonImg(id)} alt={name.charAt(0).toUpperCase() + name.slice(1)} />
+          <img src={GetPokemonImg(id)} alt={pokemonName} />
         </div>
       </div>
     </>

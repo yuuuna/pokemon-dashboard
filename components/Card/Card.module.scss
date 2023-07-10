@@ -15,6 +15,11 @@
         opacity: 1;
         box-shadow: 0px 0px 15px var(--color);
     }
+    .cardTypeArea {
+        position: absolute;
+        top: 4px;
+        left: 8px;
+    }
     .cardIdWrap {
         right: 0;
         top: 0px;
