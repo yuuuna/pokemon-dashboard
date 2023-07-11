@@ -42,7 +42,7 @@ export default function Card({ pokemon }: any) {
           {types.map(function (item: any) {
             return (
               <div className={styles.cardType} key={id + '-' + item.type.name}>
-                <Image src="/images/types/fire.png" alt="1" width="30" height="30" />
+                <Image src={`/images/types/${item.type.name}.png`} alt="1" width="30" height="30" />
               </div>
             )
           })}
