@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './Sidebar.module.scss';
 import Link from 'next/link';
 
@@ -6,7 +7,7 @@ export default function Sidebar() {
     <>
       <header className={styles.header}>
         <div className={styles.logo + " fz-10"}>
-          Pokémon Dashboard
+          <Image src="/images/PokemonDashboard-logo.png" alt="PokemonDashboard-logo" width={370} height={50} />
           {/* TODO: 製作 LOGO */}
         </div>
         {/* <div className={styles.menu}>
