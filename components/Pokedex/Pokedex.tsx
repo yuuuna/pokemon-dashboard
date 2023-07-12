@@ -3,6 +3,7 @@ import styles from './Pokedex.module.scss';
 import { Card } from '../Card';
 import { fetchPokemonList, fetchPokemonData } from '@/src/api';
 import { Generations } from "../Generations";
+import { Loading } from "../Loading";
 
 function GetPokemonList({ offset, limit }: any) {
   const [pokemonsList, setPokemonsList] = useState<any[]>([]);
@@ -51,17 +52,19 @@ export default function Pokedex() {
   return (
     <>
       <Generations nowId={generationId} ReGetPokemonList={ReGetPokemonList} />
-      <div className={styles.cardArea}>
-        {
-          isLoading ?
-            (`Loading ...`) :
-            (pokemons.map(function (pokemon) {
-              return (
-                <Card pokemon={pokemon} key={pokemon.id} />
-              )
-            }))
-        }
-      </div>
+      {
+        isLoading ?
+          (<Loading />) :
+          (
+            <div className={styles.cardArea}>
+              {pokemons.map(function (pokemon) {
+                return (
+                  <Card pokemon={pokemon} key={pokemon.id} />
+                )
+              })}
+            </div>
+          )
+      }
     </>
   )
 }
