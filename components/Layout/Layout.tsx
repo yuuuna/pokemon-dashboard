@@ -12,6 +12,7 @@ export default function Layout({
     <>
       <Head>
         <title>Pokémon DashBoard</title>
+        <link rel="icon" href="PokemonDashboard.ico" />
       </Head>
       <div className="container">
         <Sidebar />
