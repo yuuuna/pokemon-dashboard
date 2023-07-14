@@ -4,6 +4,7 @@ import { Card } from '../Card';
 import { fetchPokemonList, fetchPokemonData } from '@/src/api';
 import { Generations } from "../Generations";
 import { Loading } from "../Loading";
+import { GoToTopButton } from "../GoToTopButton";
 
 function GetPokemonList({ offset, limit }: any) {
   const [pokemonsList, setPokemonsList] = useState<any[]>([]);
@@ -65,6 +66,7 @@ export default function Pokedex() {
             </div>
           )
       }
+      <GoToTopButton />
     </>
   )
 }
