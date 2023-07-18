@@ -13,7 +13,7 @@
     background-color: rgba(0, 0, 0, 0.4);
     .modalContent {
         width: 80%;
-        margin: 15% auto;
+        margin: 5% auto;
         padding: 2rem 3rem;
         background-color: #fefefe;
         border: 3px solid #888;
@@ -57,4 +57,23 @@
 }
 
 .pokemonImages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: $fc-primary dashed 1px;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    .pokemonImage {
+        @include flex(center, column, center);
+        .title {
+            color: $fc-white;
+            background-color: $fc-black;
+            border-radius: 1rem;
+            width: 100px;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+        .image {
+            width: 80%;
+        }
+    }
 }

@@ -34,8 +34,139 @@ export default function PokemonModal({ pokemon, showModal, closeModal }: any) {
     return null;
   }
   console.log(pokemon);
-  const { name, id, types, stats } = pokemon;
+  const { name, id, types, stats, sprites } = pokemon;
   const pokemonName = name.charAt(0).toUpperCase() + name.slice(1);
+
+  const hasFemale = sprites.front_female ? true : false;
+  const normalName = hasFemale ? '男生' : '一般';
+  const shinyName = hasFemale ? '男生色違' : '色違';
+
+  // 普通圖片資料
+  const normalImageData = (
+    <>
+      {sprites.front_default ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>{normalName}(前)</span>
+          <img className={styles.image} src={sprites.front_default} />
+        </div>
+      </>) : (<></>)}
+
+      {sprites.back_default ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>{normalName}(後)</span>
+          <img className={styles.image} src={sprites.back_default} />
+        </div>
+      </>) : (<></>)}
+
+      {sprites.front_shiny ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>{shinyName}(前)</span>
+          <img className={styles.image} src={sprites.front_shiny} />
+        </div>
+      </>) : (<></>)}
+
+      {sprites.back_shiny ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>{shinyName}(後)</span>
+          <img className={styles.image} src={sprites.back_shiny} />
+        </div>
+      </>) : (<></>)}
+    </>
+  )
+
+  // 女生圖片資料
+  const femaleImageData = hasFemale ? (
+    <>
+      {sprites.front_female ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>女生(前)</span>
+          <img className={styles.image} src={sprites.front_female} />
+        </div>
+      </>) : (<></>)}
+
+      {sprites.back_female ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>女生(後)</span>
+          <img className={styles.image} src={sprites.back_female} />
+        </div>
+      </>) : (<></>)}
+
+      {sprites.front_shiny_female ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>女生色違(前)</span>
+          <img className={styles.image} src={sprites.front_shiny_female} />
+        </div>
+      </>) : (<></>)}
+
+      {sprites.back_shiny_female ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>女生色違(後)</span>
+          <img className={styles.image} src={sprites.back_shiny_female} />
+        </div>
+      </>) : (<></>)}
+    </>
+  ) : (null);
+
+  const homeImageData = (
+    <>
+      {sprites.other.home.front_default ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>Home</span>
+          <img className={styles.image} src={sprites.other.home.front_default} />
+        </div>
+      </>) : (<></>)}
+
+      {sprites.other.home.front_female ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>Home 女生</span>
+          <img className={styles.image} src={sprites.other.home.front_female} />
+        </div>
+      </>) : (<></>)}
+
+      {sprites.other.home.front_shiny ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>Home 色違</span>
+          <img className={styles.image} src={sprites.other.home.front_shiny} />
+        </div>
+      </>) : (<></>)}
+
+      {sprites.other.home.front_shiny_female ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>Home 女生色違</span>
+          <img className={styles.image} src={sprites.other.home.front_shiny_female} />
+        </div>
+      </>) : (<></>)}
+    </>
+  )
+
+  const officialArtwork = (
+    <>
+      {sprites.other['official-artwork'].front_default ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>官圖</span>
+          <img className={styles.image} src={sprites.other['official-artwork'].front_default} />
+        </div>
+      </>) : (<></>)}
+
+      {sprites.other['official-artwork'].front_shiny ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>官圖色違</span>
+          <img className={styles.image} src={sprites.other['official-artwork'].front_shiny} />
+        </div>
+      </>) : (<></>)}
+    </>
+  )
+
+  const dreamImageData = (
+    <>
+      {sprites.other.dream_world.front_default ? (<>
+        <div className={styles.pokemonImage}>
+          <span className={styles.title}>夢世界</span>
+          <img className={styles.image} src={sprites.other.dream_world.front_default} />
+        </div>
+      </>) : (<></>)}
+    </>
+  )
 
   return (
     <>
@@ -72,9 +203,13 @@ export default function PokemonModal({ pokemon, showModal, closeModal }: any) {
                 </div>
               </div>
             </div>
-            {/* <div className={styles.pokemonImages}>
-              images
-            </div> */}
+            <div className={styles.pokemonImages}>
+              {normalImageData}
+              {femaleImageData}
+              {homeImageData}
+              {officialArtwork}
+              {dreamImageData}
+            </div>
           </div>
         </div>
       </div>
