@@ -1,7 +1,6 @@
 @import "@/styles/variables";
 @import "@/styles/mixin";
 
-
 .modal {
     position: fixed;
     z-index: 1;
@@ -53,6 +52,9 @@
     .mainInfo {
         @include flex(center, column);
         width: 60%;
+        .type {
+            color: $fc-black;
+        }
     }
 }
 

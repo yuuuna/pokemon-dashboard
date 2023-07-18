@@ -28,12 +28,23 @@ function GetPokemonImg(id: number) {
   return srcUrl;
 }
 
+function GetPokemonTypeString(types: any) {
+  let typeString = '';
+  types.map((item : any) => {
+    if (typeString === '') {
+      typeString += item.type.name;
+    } else {
+      typeString += '、' + item.type.name;
+    }
+  });
+  return typeString;
+}
+
 export default function PokemonModal({ pokemon, showModal, closeModal }: any) {
 
   if (!showModal) {
     return null;
   }
-  console.log(pokemon);
   const { name, id, types, stats, sprites } = pokemon;
   const pokemonName = name.charAt(0).toUpperCase() + name.slice(1);
 
@@ -107,6 +118,7 @@ export default function PokemonModal({ pokemon, showModal, closeModal }: any) {
     </>
   ) : (null);
 
+  // Home 圖片資料
   const homeImageData = (
     <>
       {sprites.other.home.front_default ? (<>
@@ -139,6 +151,7 @@ export default function PokemonModal({ pokemon, showModal, closeModal }: any) {
     </>
   )
 
+  // 官方圖片資料
   const officialArtwork = (
     <>
       {sprites.other['official-artwork'].front_default ? (<>
@@ -157,6 +170,7 @@ export default function PokemonModal({ pokemon, showModal, closeModal }: any) {
     </>
   )
 
+  // 夢世界圖片資料
   const dreamImageData = (
     <>
       {sprites.other.dream_world.front_default ? (<>
@@ -184,14 +198,9 @@ export default function PokemonModal({ pokemon, showModal, closeModal }: any) {
                 <img src={GetPokemonImg(id)} alt={pokemonName} />
               </div>
               <div className={styles.mainInfo}>
-                <div>
-                  屬性：{types.map(function (item: any) {
-                    return (
-                      <span key={id + '-' + item.type.name}>
-                        {item.type.name}、
-                      </span>
-                    )
-                  })}
+                <div className={styles.type}>
+                  屬性：
+                  {GetPokemonTypeString(types)}
                 </div>
                 <div>
                   種族值：
