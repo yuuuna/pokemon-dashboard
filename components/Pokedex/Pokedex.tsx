@@ -5,6 +5,7 @@ import { fetchPokemonList, fetchPokemonData } from '@/src/api';
 import { Generations } from "../Generations";
 import { Loading } from "../Loading";
 import { GoToTopButton } from "../GoToTopButton";
+import { PokemonModal } from "../PokemonModal";
 
 function GetPokemonList({ offset, limit }: any) {
   const [pokemonsList, setPokemonsList] = useState<any[]>([]);
@@ -43,11 +44,17 @@ export default function Pokedex() {
   const [offset, setOffset] = useState(0);
   const [limit, setLimit] = useState(151);
   const { pokemons, isLoading } = GetPokemonList({ offset, limit });
+  const [pokemon, setPokemon] = useState({});
+  const [showModal, setShowModal] = useState(false);
 
   function ReGetPokemonList({ offset, limit, generationId }: any) {
     setOffset(offset);
     setLimit(limit);
     setGenerationId(generationId);
+  }
+
+  function openModal() {
+    setShowModal(true);
   }
 
   return (
@@ -60,13 +67,14 @@ export default function Pokedex() {
             <div className={styles.cardArea}>
               {pokemons.map(function (pokemon) {
                 return (
-                  <Card pokemon={pokemon} key={pokemon.id} />
+                  <Card pokemon={pokemon} key={pokemon.id} onChangePokemon={setPokemon} onClickFunction={() => openModal()} />
                 )
               })}
             </div>
           )
       }
       <GoToTopButton />
+      <PokemonModal pokemon={pokemon} showModal={showModal} closeModal={() => setShowModal(false)} />
     </>
   )
 }

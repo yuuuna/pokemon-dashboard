@@ -1,0 +1,60 @@
+@import "@/styles/variables";
+@import "@/styles/mixin";
+
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    .modalContent {
+        width: 80%;
+        margin: 15% auto;
+        padding: 2rem 3rem;
+        background-color: #fefefe;
+        border: 3px solid #888;
+        border-radius: 1rem;
+    }
+    .modalHeader {
+        .close {
+            color: $fc-black;
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            &:hover,
+            &:focus {
+                color: black;
+                cursor: pointer;
+            }
+        }
+        span {
+            font-size: 2rem;
+            color: $fc-black;
+            font-weight: bold;
+        }
+    }
+    .modalBody {
+    }
+}
+
+.pokemonMain {
+    @include flex;
+    .mainImage {
+        @include flex(center);
+        width: 40%;
+        img {
+            max-width: 80%;
+        }
+    }
+    .mainInfo {
+        @include flex(center, column);
+        width: 60%;
+    }
+}
+
+.pokemonImages {
+}

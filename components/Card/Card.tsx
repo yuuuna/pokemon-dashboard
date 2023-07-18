@@ -29,7 +29,7 @@ function GetPokemonImg(id: number) {
   return srcUrl;
 }
 
-export default function Card({ pokemon }: any) {
+export default function Card({ pokemon, onClickFunction, onChangePokemon }: any) {
   if (!pokemon) {
     return null;
   }
@@ -37,7 +37,7 @@ export default function Card({ pokemon }: any) {
   const pokemonName = name.charAt(0).toUpperCase() + name.slice(1);
   return (
     <>
-      <div className={styles.card + ` type-${types[0].type.name}`}>
+      <div className={styles.card + ` type-${types[0].type.name}`} onClick={() => { onChangePokemon(pokemon); onClickFunction() }}>
         <div className={styles.cardTypeArea}>
           {types.map(function (item: any) {
             return (
