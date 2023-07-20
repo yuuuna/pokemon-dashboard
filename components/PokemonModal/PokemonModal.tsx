@@ -171,16 +171,16 @@ export default function PokemonModal({ pokemon, showModal, closeModal }: any) {
   )
 
   // 夢世界圖片資料
-  const dreamImageData = (
-    <>
-      {sprites.other.dream_world.front_default ? (<>
-        <div className={styles.pokemonImage}>
-          <span className={styles.title}>夢世界</span>
-          <img className={styles.image} src={sprites.other.dream_world.front_default} />
-        </div>
-      </>) : (<></>)}
-    </>
-  )
+  // const dreamImageData = (
+  //   <>
+  //     {sprites.other.dream_world.front_default ? (<>
+  //       <div className={styles.pokemonImage}>
+  //         <span className={styles.title}>夢世界</span>
+  //         <img className={styles.image} src={sprites.other.dream_world.front_default} />
+  //       </div>
+  //     </>) : (<></>)}
+  //   </>
+  // )
 
   return (
     <>
@@ -217,7 +217,7 @@ export default function PokemonModal({ pokemon, showModal, closeModal }: any) {
               {femaleImageData}
               {homeImageData}
               {officialArtwork}
-              {dreamImageData}
+              {/* {dreamImageData} */}
             </div>
           </div>
         </div>
