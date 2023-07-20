@@ -214,7 +214,7 @@ export default function PokemonModal({ pokemon, showModal, closeModal }: any) {
 
   return (
     <>
-      <div className={styles.modal}>
+      <div className={styles.modal + ` type-${types[0].type.name}`}>
         <div className={styles.modalContent} >
           <div className={styles.modalHeader} >
             <div className={styles.close} onClick={closeModal}>

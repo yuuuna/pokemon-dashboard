@@ -15,12 +15,12 @@
         margin: 5% auto;
         padding: 2rem 3rem;
         background-color: #fefefe;
-        border: 3px solid #888;
+        border: 3px solid var(--color);
         border-radius: 1rem;
     }
     .modalHeader {
         .close {
-            color: $fc-black;
+            color: var(--color);
             float: right;
             font-size: 2rem;
             font-weight: bold;
@@ -32,7 +32,7 @@
         }
         span {
             font-size: 2rem;
-            color: $fc-black;
+            color: var(--color);
             font-weight: bold;
         }
     }
@@ -59,6 +59,8 @@
             width: 100%;
             border-collapse: collapse;
             color: $fc-black;
+            border-color: var(--color);
+            border-width: 2px;
         }
         .statBg {
             background-color: var(--bg);
@@ -88,7 +90,7 @@
         @include flex(center, column, center);
         .title {
             color: $fc-white;
-            background-color: $fc-black;
+            background-color: var(--color);
             border-radius: 1rem;
             width: 100px;
             text-align: center;
