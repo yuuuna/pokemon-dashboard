@@ -247,7 +247,7 @@ export default function PokemonModal({ pokemon, showModal, closeModal }: any) {
                             <td style={{ width: '50px' }}>{stat.base_stat}</td>
                             <td >
                               <div className={styles.statBg}>
-                                <div className={styles.statBar} style={{ width: `calc(100% * (${stat.base_stat} / 600))` }}>&nbsp;
+                                <div className={styles.statBar} style={{ width: `calc(100% * (${stat.base_stat} / 255))` }}>&nbsp;
                                 </div>
                               </div>
                             </td>

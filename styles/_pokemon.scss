@@ -75,29 +75,35 @@
 .stat-hp {
     --bg: rgb(213, 245, 186);
     --bar: rgb(172, 217, 120);
+    --border: rgb(144, 187, 95);
 }
 
 .stat-attack {
     --bg: rgb(246, 226, 156);
     --bar: rgb(241, 205, 89);
+    --border: rgb(208, 176, 71);
 }
 
 .stat-defense {
     --bg: rgb(241, 188, 129);
     --bar: rgb(206, 140, 72);
+    --border: rgb(157, 101, 46);
 }
 
 .stat-special-attack {
     --bg: rgb(172, 211, 217);
     --bar: rgb(117, 192, 206);
+    --border: rgb(78, 145, 157);
 }
 
 .stat-special-defense {
     --bg: rgb(143, 168, 202);
     --bar: rgb(101, 143, 200);
+    --border: rgb(72, 109, 161);
 }
 
 .stat-speed {
     --bg: rgb(189, 158, 212);
     --bar: rgb(154, 90, 201);
+    --border: rgb(118, 63, 157);
 }
