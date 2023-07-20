@@ -31,13 +31,80 @@ function GetPokemonImg(id: number) {
 function GetPokemonTypeString(types: any) {
   let typeString = '';
   types.map((item: any) => {
+    const typeName = GetPokemonTypeName(item.type.name);
     if (typeString === '') {
-      typeString += item.type.name;
+      typeString += typeName;
     } else {
-      typeString += '、' + item.type.name;
+      typeString += '、' + typeName;
     }
   });
   return typeString;
+}
+
+/**
+ * 取得屬性名稱
+ * @param typeId 
+ * @returns 
+ */
+function GetPokemonTypeName(typeId: string) {
+  let typeName = typeId;
+  switch (typeId) {
+    case 'normal':
+      typeName = '一般';
+      break;
+    case 'fighting':
+      typeName = '格鬥';
+      break;
+    case 'flying':
+      typeName = '飛行';
+      break;
+    case 'poison':
+      typeName = '毒';
+      break;
+    case 'ground':
+      typeName = '地面';
+      break;
+    case 'rock':
+      typeName = '岩石';
+      break;
+    case 'bug':
+      typeName = '蟲';
+      break;
+    case 'ghost':
+      typeName = '幽靈';
+      break;
+    case 'steel':
+      typeName = '鋼';
+      break;
+    case 'fire':
+      typeName = '火';
+      break;
+    case 'water':
+      typeName = '水';
+      break;
+    case 'grass':
+      typeName = '草';
+      break;
+    case 'electric':
+      typeName = '電';
+      break;
+    case 'psychic':
+      typeName = '超能';
+      break;
+    case 'ice':
+      typeName = '冰';
+      break;
+    case 'dragon':
+      typeName = '龍';
+      break;
+    case 'dark':
+      typeName = '暗';
+      break;
+    case 'fairy':
+      typeName = '妖精';
+      break;
+  }
+  return typeName;
 }
 
 /**
