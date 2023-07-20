@@ -1,3 +1,4 @@
+// 屬性
 .type-normal {
     --color: rgb(184, 184, 184);
 }
@@ -68,4 +69,35 @@
 
 .type-fairy {
     --color: rgb(247, 162, 255);
+}
+
+// 種族值
+.stat-hp {
+    --bg: rgb(213, 245, 186);
+    --bar: rgb(172, 217, 120);
+}
+
+.stat-attack {
+    --bg: rgb(246, 226, 156);
+    --bar: rgb(241, 205, 89);
+}
+
+.stat-defense {
+    --bg: rgb(241, 188, 129);
+    --bar: rgb(206, 140, 72);
+}
+
+.stat-special-attack {
+    --bg: rgb(172, 211, 217);
+    --bar: rgb(117, 192, 206);
+}
+
+.stat-special-defense {
+    --bg: rgb(143, 168, 202);
+    --bar: rgb(101, 143, 200);
+}
+
+.stat-speed {
+    --bg: rgb(189, 158, 212);
+    --bar: rgb(154, 90, 201);
 }

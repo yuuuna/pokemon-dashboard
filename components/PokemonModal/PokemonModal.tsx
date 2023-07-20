@@ -30,7 +30,7 @@ function GetPokemonImg(id: number) {
 
 function GetPokemonTypeString(types: any) {
   let typeString = '';
-  types.map((item : any) => {
+  types.map((item: any) => {
     if (typeString === '') {
       typeString += item.type.name;
     } else {
@@ -38,6 +38,36 @@ function GetPokemonTypeString(types: any) {
     }
   });
   return typeString;
+}
+
+/**
+ * 取得種族值類型名稱
+ * @param statId 
+ * @returns 名稱
+ */
+function GetPokemonStatName(statId: string) {
+  let statName = '';
+  switch (statId) {
+    case 'hp':
+      statName = 'HP';
+      break;
+    case 'attack':
+      statName = '攻擊';
+      break;
+    case 'defense':
+      statName = '防禦';
+      break;
+    case 'special-attack':
+      statName = '特攻';
+      break;
+    case 'special-defense':
+      statName = '特防';
+      break;
+    case 'speed':
+      statName = '速度';
+      break;
+  }
+  return statName;
 }
 
 export default function PokemonModal({ pokemon, showModal, closeModal }: any) {
@@ -203,12 +233,29 @@ export default function PokemonModal({ pokemon, showModal, closeModal }: any) {
                   {GetPokemonTypeString(types)}
                 </div>
                 <div>
-                  種族值：
-                  {stats.map(function (stat: any) {
-                    return (
-                      <div key={id + '-' + stat.stat.name}>{stat.base_stat} / 600</div>
-                    )
-                  })}
+                  <table className={styles.statsTable} border={1}>
+                    <thead>
+                      <tr>
+                        <td colSpan={3} style={{ textAlign: 'center' }}>種族值</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {stats.map(function (stat: any) {
+                        return (
+                          <tr key={id + '-' + stat.stat.name} className={`stat-${stat.stat.name}`}>
+                            <td style={{ width: '60px' }}>{GetPokemonStatName(stat.stat.name)}：</td>
+                            <td style={{ width: '50px' }}>{stat.base_stat}</td>
+                            <td >
+                              <div className={styles.statBg}>
+                                <div className={styles.statBar} style={{ width: `calc(100% * (${stat.base_stat} / 600))` }}>&nbsp;
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        )
+                      })}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
