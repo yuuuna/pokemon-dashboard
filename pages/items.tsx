@@ -1,5 +1,6 @@
 import { Loading } from "@/components/Loading";
-import { fetchItemData, fetchItemList } from "@/src/api";
+import { fetchItemCategory } from "@/src/api";
+import itemCategorys from '@/src/item-category.json';
 import { useCallback, useEffect, useState } from "react";
 
 function GetItemList({ offset, limit }: any) {
@@ -9,21 +10,20 @@ function GetItemList({ offset, limit }: any) {
   const itemList = useCallback(async () => {
     setItemsList([]);
     setIsSuccess(true);
+    const list: any[] = [];
 
-    await fetchItemList({ offset: offset, limit: limit }).then(async (item) => {
-      const list: any[] = [];
+    await Promise.all(itemCategorys.map(async (data: any) => {
+      await fetchItemCategory({ name: data.category }).then(async (item) => {
+        item.items = await item.items.filter(function (d: any) {
+          return !data.exclude.includes(d.name);
+        });
+        list[data.sort] = item;
+      });
 
-      await Promise.all(item.results.map(async (data: any) => {
-        const name = data.name.toString();
-        const dt = await fetchItemData({ name: name });
-        list[dt.id] = dt;
-      }));
+    }));
 
-      setItemsList(list);
-      setIsSuccess(false);
-    });
-
-
+    setItemsList(list);
+    setIsSuccess(false);
   }, []);
 
   useEffect(() => {
@@ -51,7 +51,15 @@ export default function Items() {
             <div>
               {items.map(function (item) {
                 return (
-                  <img key={item.id} src={item.sprites.default} />
+                  <div key={item.id}>
+                    <div><img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${item.items[0].name}.png`} title={item.items[0].name} alt={item.items[0].name} />{item.name}</div>
+                    {item.items.map(function (data: any) {
+                      return (
+                        <img key={data.name} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${data.name}.png`} title={data.name} alt={data.name} />
+                      )
+                    })}
+                    <hr />
+                  </div>
                 )
               })}
             </div>

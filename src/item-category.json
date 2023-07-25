@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "category": "stat-boosts",
+        "name": "stat-boosts",
+        "img": "",
+        "exclude": ["max-mushrooms"],
+        "sort": 1
+    },
+    {
+        "id": 2,
+        "category": "effort-drop",
+        "name": "effort-drop",
+        "img": "",
+        "exclude": [],
+        "sort": 2
+    },
+    {
+        "id": 3,
+        "category": "medicine",
+        "name": "medicine",
+        "img": "",
+        "exclude": [],
+        "sort": 3
+    },
+    {
+        "id": 4,
+        "category": "other",
+        "name": "other",
+        "img": "",
+        "exclude": [],
+        "sort": 4
+    },
+    {
+        "id": 5,
+        "category": "in-a-pinch",
+        "name": "in-a-pinch",
+        "img": "",
+        "exclude": [],
+        "sort": 5
+    },
+    {
+        "id": 6,
+        "category": "picky-healing",
+        "name": "picky-healing",
+        "img": "",
+        "exclude": [],
+        "sort": 6
+    },
+    {
+        "id": 7,
+        "category": "type-protection",
+        "name": "type-protection",
+        "img": "",
+        "exclude": [],
+        "sort": 7
+    },
+    {
+        "id": 8,
+        "category": "baking-only",
+        "name": "baking-only",
+        "img": "",
+        "exclude": [],
+        "sort": 8
+    },
+    {
+        "id": 9,
+        "category": "collectibles",
+        "name": "collectibles",
+        "img": "",
+        "exclude": ["wishing-piece", "galarica-twig", "galarica-cuff", "armorite-ore", "galarica-wreath", "dynite-ore"],
+        "sort": 9
+    },
+    {
+        "id": 10,
+        "category": "evolution",
+        "name": "evolution",
+        "img": "",
+        "exclude": ["strawberry-sweet", "love-sweet", "berry-sweet", "clover-sweet", "flower-sweet", "star-sweet", "ribbon-sweet", "sweet-apple", "tart-apple", "cracked-pot", "chipped-pot", "malicious-armor", "black-augurite", "peat-block"],
+        "sort": 10
+    },
+    {
+        "id": 11,
+        "category": "spelunking",
+        "name": "spelunking",
+        "img": "",
+        "exclude": ["lure", "super-lure", "max-lure"],
+        "sort": 11
+    },
+    {
+        "id": 12,
+        "category": "held-items",
+        "name": "held-items",
+        "img": "",
+        "exclude": ["throat-spray", "eject-pack", "heavy-duty-boots", "blunder-policy", "room-service", "utility-umbrella", "booster-energy", "ability-shield", "clear-amulet", "mirror-herb", "punching-glove", "covert-cloak", "loaded-dice"],
+        "sort": 12
+    },
+    {
+        "id": 13,
+        "category": "choice",
+        "name": "choice",
+        "img": "",
+        "exclude": [],
+        "sort": 13
+    },
+    {
+        "id": 14,
+        "category": "effort-training",
+        "name": "effort-training",
+        "img": "",
+        "exclude": [],
+        "sort": 14
+    },
+    {
+        "id": 15,
+        "category": "bad-held-items",
+        "name": "bad-held-items",
+        "img": "",
+        "exclude": [],
+        "sort": 15
+    },
+    {
+        "id": 16,
+        "category": "training",
+        "name": "training",
+        "img": "",
+        "exclude": [],
+        "sort": 16
+    },
+    {
+        "id": 17,
+        "category": "plates",
+        "name": "plates",
+        "img": "",
+        "exclude": ["blank-plate", "legend-plate"],
+        "sort": 17
+    },
+    {
+        "id": 18,
+        "category": "species-specific",
+        "name": "species-specific",
+        "img": "",
+        "exclude": ["rusted-sword", "rusted-shield"],
+        "sort": 18
+    },
+    {
+        "id": 19,
+        "category": "type-enhancement",
+        "name": "type-enhancement",
+        "img": "",
+        "exclude": [],
+        "sort": 19
+    },
+    {
+        "id": 20,
+        "category": "event-items",
+        "name": "event-items",
+        "img": "",
+        "exclude": ["strange-ball", "rotom-phone", "sandwich", "koraidon’s-poké-ball", "miraidon’s-poké-ball", "tera-orb", "scarlet-book", "violet-book"],
+        "sort": 20
+    },
+    {
+        "id": 34,
+        "category": "standard-balls",
+        "name": "standard-balls",
+        "img": "",
+        "exclude": [],
+        "sort": 0
+    }
+]
