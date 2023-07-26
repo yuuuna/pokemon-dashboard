@@ -160,11 +160,163 @@
         "sort": 20
     },
     {
+        "id": 21,
+        "category": "gameplay",
+        "name": "gameplay",
+        "img": "",
+        "exclude": [],
+        "sort": 21
+    },
+    {
+        "id": 22,
+        "category": "plot-advancement",
+        "name": "plot-advancement",
+        "img": "",
+        "exclude": [],
+        "sort": 22
+    },
+    {
+        "id": 23,
+        "category": "unused",
+        "name": "unused",
+        "img": "",
+        "exclude": [],
+        "sort": 23
+    },
+    {
+        "id": 24,
+        "category": "loot",
+        "name": "loot",
+        "img": "",
+        "exclude": [],
+        "sort": 24
+    },
+    {
+        "id": 25,
+        "category": "all-mail",
+        "name": "all-mail",
+        "img": "",
+        "exclude": [],
+        "sort": 25
+    },
+    {
+        "id": 26,
+        "category": "vitamins",
+        "name": "vitamins",
+        "img": "",
+        "exclude": [],
+        "sort": 26
+    },
+    {
+        "id": 27,
+        "category": "healing",
+        "name": "healing",
+        "img": "",
+        "exclude": [],
+        "sort": 27
+    },
+    {
+        "id": 28,
+        "category": "pp-recovery",
+        "name": "pp-recovery",
+        "img": "",
+        "exclude": [],
+        "sort": 28
+    },
+    {
+        "id": 29,
+        "category": "revival",
+        "name": "revival",
+        "img": "",
+        "exclude": [],
+        "sort": 29
+    },
+    {
+        "id": 30,
+        "category": "status-cures",
+        "name": "status-cures",
+        "img": "",
+        "exclude": [],
+        "sort": 30
+    },
+    {
+        "id": 32,
+        "category": "mulch",
+        "name": "mulch",
+        "img": "",
+        "exclude": [],
+        "sort": 32
+    },
+    {
+        "id": 33,
+        "category": "special-balls",
+        "name": "special-balls",
+        "img": "",
+        "exclude": [],
+        "sort": 33
+    },
+    {
         "id": 34,
         "category": "standard-balls",
         "name": "standard-balls",
         "img": "",
         "exclude": [],
-        "sort": 0
+        "sort": 34
+    },
+    {
+        "id": 35,
+        "category": "dex-completion",
+        "name": "dex-completion",
+        "img": "",
+        "exclude": [],
+        "sort": 35
+    },
+    {
+        "id": 36,
+        "category": "scarves",
+        "name": "scarves",
+        "img": "",
+        "exclude": [],
+        "sort": 36
+    },
+    {
+        "id": 37,
+        "category": "all-machines",
+        "name": "all-machines",
+        "img": "",
+        "exclude": [],
+        "sort": 37
+    },
+    {
+        "id": 38,
+        "category": "flutes",
+        "name": "flutes",
+        "img": "",
+        "exclude": [],
+        "sort": 38
+    },
+    {
+        "id": 39,
+        "category": "apricorn-balls",
+        "name": "apricorn-balls",
+        "img": "",
+        "exclude": [],
+        "sort": 39
+    },
+    {
+        "id": 40,
+        "category": "apricorn-box",
+        "name": "apricorn-box",
+        "img": "",
+        "exclude": [],
+        "sort": 40
+    },
+    {
+        "id": 41,
+        "category": "data-cards",
+        "name": "data-cards",
+        "img": "",
+        "exclude": [],
+        "sort": 41
     }
 ]
