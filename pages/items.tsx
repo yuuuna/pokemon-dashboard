@@ -17,6 +17,7 @@ function GetItemList({ offset, limit }: any) {
         item.items = await item.items.filter(function (d: any) {
           return !data.exclude.includes(d.name);
         });
+        item.name = data.name;
         list[data.sort] = item;
       });
 

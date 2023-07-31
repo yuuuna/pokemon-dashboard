@@ -5,7 +5,7 @@
         "name": "stat-boosts",
         "img": "",
         "exclude": ["max-mushrooms"],
-        "sort": 1
+        "sort": 100
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "name": "effort-drop",
         "img": "",
         "exclude": [],
-        "sort": 2
+        "sort": 200
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "name": "medicine",
         "img": "",
         "exclude": [],
-        "sort": 3
+        "sort": 300
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "name": "other",
         "img": "",
         "exclude": [],
-        "sort": 4
+        "sort": 400
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "name": "in-a-pinch",
         "img": "",
         "exclude": [],
-        "sort": 5
+        "sort": 500
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "name": "picky-healing",
         "img": "",
         "exclude": [],
-        "sort": 6
+        "sort": 600
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "name": "type-protection",
         "img": "",
         "exclude": [],
-        "sort": 7
+        "sort": 700
     },
     {
         "id": 8,
@@ -61,7 +61,7 @@
         "name": "baking-only",
         "img": "",
         "exclude": [],
-        "sort": 8
+        "sort": 800
     },
     {
         "id": 9,
@@ -69,7 +69,7 @@
         "name": "collectibles",
         "img": "",
         "exclude": ["wishing-piece", "galarica-twig", "galarica-cuff", "armorite-ore", "galarica-wreath", "dynite-ore"],
-        "sort": 9
+        "sort": 900
     },
     {
         "id": 10,
@@ -77,7 +77,7 @@
         "name": "evolution",
         "img": "",
         "exclude": ["strawberry-sweet", "love-sweet", "berry-sweet", "clover-sweet", "flower-sweet", "star-sweet", "ribbon-sweet", "sweet-apple", "tart-apple", "cracked-pot", "chipped-pot", "malicious-armor", "black-augurite", "peat-block"],
-        "sort": 10
+        "sort": 1000
     },
     {
         "id": 11,
@@ -85,7 +85,7 @@
         "name": "spelunking",
         "img": "",
         "exclude": ["lure", "super-lure", "max-lure"],
-        "sort": 11
+        "sort": 1100
     },
     {
         "id": 12,
@@ -93,7 +93,7 @@
         "name": "held-items",
         "img": "",
         "exclude": ["throat-spray", "eject-pack", "heavy-duty-boots", "blunder-policy", "room-service", "utility-umbrella", "booster-energy", "ability-shield", "clear-amulet", "mirror-herb", "punching-glove", "covert-cloak", "loaded-dice"],
-        "sort": 12
+        "sort": 1200
     },
     {
         "id": 13,
@@ -101,7 +101,7 @@
         "name": "choice",
         "img": "",
         "exclude": [],
-        "sort": 13
+        "sort": 1300
     },
     {
         "id": 14,
@@ -109,7 +109,7 @@
         "name": "effort-training",
         "img": "",
         "exclude": [],
-        "sort": 14
+        "sort": 1400
     },
     {
         "id": 15,
@@ -117,7 +117,7 @@
         "name": "bad-held-items",
         "img": "",
         "exclude": [],
-        "sort": 15
+        "sort": 1500
     },
     {
         "id": 16,
@@ -125,7 +125,7 @@
         "name": "training",
         "img": "",
         "exclude": [],
-        "sort": 16
+        "sort": 1600
     },
     {
         "id": 17,
@@ -133,7 +133,7 @@
         "name": "plates",
         "img": "",
         "exclude": ["blank-plate", "legend-plate"],
-        "sort": 17
+        "sort": 1700
     },
     {
         "id": 18,
@@ -141,7 +141,7 @@
         "name": "species-specific",
         "img": "",
         "exclude": ["rusted-sword", "rusted-shield"],
-        "sort": 18
+        "sort": 1800
     },
     {
         "id": 19,
@@ -149,7 +149,7 @@
         "name": "type-enhancement",
         "img": "",
         "exclude": [],
-        "sort": 19
+        "sort": 1900
     },
     {
         "id": 20,
@@ -157,14 +157,190 @@
         "name": "event-items",
         "img": "",
         "exclude": ["strange-ball", "rotom-phone", "sandwich", "koraidon’s-poké-ball", "miraidon’s-poké-ball", "tera-orb", "scarlet-book", "violet-book"],
-        "sort": 20
+        "sort": 2000
+    },
+    {
+        "id": 21,
+        "category": "gameplay",
+        "name": "gameplay",
+        "img": "",
+        "exclude": ["pokemon-box-link", "fishing-rod--galar", "rotom-bike", "camping-gear", "hi-tech-earbuds", "catching-charm", "rotom-catalog", "style-card", "exp-charm", "mark-charm", "adamant-crystal", "lustrous-globe", "griseous-core", "scroll-of-darkness", "scroll-of-waters"],
+        "sort": 2100
+    },
+    {
+        "id": 22,
+        "category": "plot-advancement",
+        "name": "plot-advancement",
+        "img": "",
+        "exclude": ["secret-key--letsgo", "ss-ticket--letsgo", "parcel--letsgo", "card-key--letsgo", "endorsement", "wishing-star", "dynamax-band", "old-letter", "sonias-book", "armor-pass", "legendary-clue-1", "legendary-clue-2", "legendary-clue-3", "legendary-clue-question", "crown-pass", "wooden-crown", "radiant-petal", "white-mane-hair", "black-mane-hair", "iceroot-carrot", "shaderoot-carrot", "carrot-seeds", "reins-of-unity", "kofu’s-wallet"],
+        "sort": 2200
+    },
+    {
+        "id": 23,
+        "category": "unused",
+        "name": "unused",
+        "img": "",
+        "exclude": ["mega-glove", "mega-pendant", "mega-glasses", "mega-anchor", "mega-stickpin", "mega-tiara", "mega-anklet", "xtransceiver--red", "xtransceiver--yellow", "autograph", "pokemon-box", "medicine-pocket", "candy-jar", "power-up-pocket", "clothing-trunk", "catching-pocket", "battle-pocket", "wishing-chip", "rotom-bike--water-mode", "band-autograph", "rotom-bike--sparkling-white", "rotom-bike--glistening-black", "reins-of-unity--merge", "reins-of-unity--split"],
+        "sort": 2300
+    },
+    {
+        "id": 24,
+        "category": "loot",
+        "name": "loot",
+        "img": "",
+        "exclude": ["stretchy-spring", "chalky-stone", "marble", "lone-earring", "beach-glass", "gold-leaf", "silver-leaf", "polished-mud-ball", "tropical-shell", "leaf-letter--pikachu", "leaf-letter--eevee", "small-bouquet", "tiny-bamboo-shoot", "big-bamboo-shoot"],
+        "sort": 2400
+    },
+    {
+        "id": 25,
+        "category": "all-mail",
+        "name": "all-mail",
+        "img": "",
+        "exclude": [],
+        "sort": 2500
+    },
+    {
+        "id": 26,
+        "category": "vitamins",
+        "name": "vitamins",
+        "img": "",
+        "exclude": ["health-candy", "mighty-candy", "tough-candy", "smart-candy", "courage-candy", "quick-candy", "health-candy-l", "mighty-candy-l", "tough-candy-l", "smart-candy-l", "courage-candy-l", "quick-candy-l", "health-candy-xl", "mighty-candy-xl", "tough-candy-xl", "smart-candy-xl", "courage-candy-xl", "quick-candy-xl", "exp-candy-xs", "exp-candy-s", "exp-candy-m", "exp-candy-l", "exp-candy-xl", "dynamax-candy", "ability-patch"],
+        "sort": 2600
+    },
+    {
+        "id": 27,
+        "category": "healing",
+        "name": "healing",
+        "img": "",
+        "exclude": [],
+        "sort": 2700
+    },
+    {
+        "id": 28,
+        "category": "pp-recovery",
+        "name": "pp-recovery",
+        "img": "",
+        "exclude": [],
+        "sort": 2800
+    },
+    {
+        "id": 29,
+        "category": "revival",
+        "name": "revival",
+        "img": "",
+        "exclude": ["max-honey"],
+        "sort": 2900
+    },
+    {
+        "id": 30,
+        "category": "status-cures",
+        "name": "status-cures",
+        "img": "",
+        "exclude": ["pewter-crunchies"],
+        "sort": 3000
+    },
+    {
+        "id": 32,
+        "category": "mulch",
+        "name": "mulch",
+        "img": "",
+        "exclude": [],
+        "sort": 3200
+    },
+    {
+        "id": 33,
+        "category": "special-balls",
+        "name": "寶貝球(特別)",
+        "img": "",
+        "exclude": [],
+        "sort": 2
     },
     {
         "id": 34,
         "category": "standard-balls",
-        "name": "standard-balls",
+        "name": "寶貝球",
         "img": "",
         "exclude": [],
-        "sort": 0
+        "sort": 1
+    },
+    {
+        "id": 35,
+        "category": "dex-completion",
+        "name": "dex-completion",
+        "img": "",
+        "exclude": ["fossilized-bird", "fossilized-fish", "fossilized-drake", "fossilized-dino"],
+        "sort": 35
+    },
+    {
+        "id": 36,
+        "category": "scarves",
+        "name": "頭巾",
+        "img": "",
+        "exclude": [],
+        "sort": 36
+    },
+    {
+        "id": 38,
+        "category": "flutes",
+        "name": "flutes",
+        "img": "",
+        "exclude": [],
+        "sort": 38
+    },
+    {
+        "id": 39,
+        "category": "apricorn-balls",
+        "name": "柑果球",
+        "img": "",
+        "exclude": [],
+        "sort": 3
+    },
+    {
+        "id": 40,
+        "category": "apricorn-box",
+        "name": "球果",
+        "img": "",
+        "exclude": [],
+        "sort": 40
+    },
+    {
+        "id": 42,
+        "category": "jewels",
+        "name": "寶石",
+        "img": "",
+        "exclude": [],
+        "sort": 42
+    },
+    {
+        "id": 43,
+        "category": "miracle-shooter",
+        "name": "miracle-shooter",
+        "img": "",
+        "exclude": [],
+        "sort": 43
+    },
+    {
+        "id": 44,
+        "category": "mega-stones",
+        "name": "MEGA 進化石",
+        "img": "",
+        "exclude": [],
+        "sort": 44
+    },
+    {
+        "id": 45,
+        "category": "memories",
+        "name": "memories",
+        "img": "",
+        "exclude": [],
+        "sort": 45
+    },
+    {
+        "id": 46,
+        "category": "z-crystals",
+        "name": "Z 純晶",
+        "img": "",
+        "exclude": [],
+        "sort": 46
     }
 ]
