@@ -2,8 +2,9 @@ import { Loading } from "@/components/Loading";
 import { fetchItemCategory } from "@/src/api";
 import itemCategorys from '@/src/item-category.json';
 import { useCallback, useEffect, useState } from "react";
+import styles from './ItemList.module.scss';
 
-function GetItemList({ offset, limit }: any) {
+function GetItemList() {
   const [itemsList, setItemsList] = useState<any[]>([]);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -38,27 +39,25 @@ function GetItemList({ offset, limit }: any) {
 }
 
 export default function ItemList() {
-  const { items, isLoading } = GetItemList({ offset: 0, limit: 100 });
+  const { items, isLoading } = GetItemList();
 
-  console.log(items);
   return (
     <>
-      <div style={{ textAlign: 'center', width: '100%' }}>頁面施工中！！</div>
       {
         isLoading ?
           (<Loading />) :
           (
-            <div>
+            <div className={styles.item}>
               {items.map(function (item) {
                 return (
-                  <div key={item.id}>
-                    <div><img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${item.items[0].name}.png`} title={item.items[0].name} alt={item.items[0].name} />{item.name}</div>
-                    {item.items.map(function (data: any) {
+                  <div key={item.id} className={styles.itemArea}>
+                    <div className={styles.itemTitle}><img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${item.items[0].name}.png`} title={item.items[0].name} alt={item.items[0].name} />{item.name}</div>
+                    <div className={styles.itemList}>{item.items.map(function (data: any) {
                       return (
                         <img key={data.name} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${data.name}.png`} title={data.name} alt={data.name} />
                       )
                     })}
-                    <hr />
+                    </div>
                   </div>
                 )
               })}

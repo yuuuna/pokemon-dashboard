@@ -1,0 +1,26 @@
+@import "@/styles/variables";
+@import "@/styles/mixin";
+
+.item {
+    width: 60%;
+    margin: auto;
+}
+
+.itemArea + .itemArea {
+    border-top: 1px #000 solid;
+}
+
+.itemTitle {
+    @include flex(center);
+    color: $fc-black;
+    font-size: 1.25rem;
+    font-weight: 900;
+    padding-top: 0.5rem;
+}
+
+.itemList {
+    @include flex(center);
+    flex-wrap: wrap;
+    padding-top: 0.25rem;
+    padding-bottom: 0.5rem;
+}
