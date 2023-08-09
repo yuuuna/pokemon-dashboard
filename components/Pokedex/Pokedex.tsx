@@ -46,6 +46,7 @@ export default function Pokedex() {
   const { pokemons, isLoading } = GetPokemonList({ offset, limit });
   const [pokemon, setPokemon] = useState({});
   const [showModal, setShowModal] = useState(false);
+  const [selectPokemons, setSelectPokemons] = useState<any[]>([]); // 最多選取兩個，for 對戰模擬器
 
   function ReGetPokemonList({ offset, limit, generationId }: any) {
     setOffset(offset);
@@ -55,6 +56,18 @@ export default function Pokedex() {
 
   function openModal() {
     setShowModal(true);
+  }
+
+  function ClickSelectPokemon({ clickPokemon }: any) {
+    let nowSelectPokemons = selectPokemons;
+    let index = 0;
+    if (nowSelectPokemons[0] != undefined && nowSelectPokemons[1] == undefined) {
+      index = 1;
+    } else if (nowSelectPokemons[1] != undefined) {
+      console.log('滿了！！');
+    }
+    nowSelectPokemons[index] = clickPokemon;
+    setSelectPokemons(nowSelectPokemons);
   }
 
   return (
@@ -67,7 +80,7 @@ export default function Pokedex() {
             <div className={styles.cardArea}>
               {pokemons.map(function (pokemon) {
                 return (
-                  <Card pokemon={pokemon} key={pokemon.id} onChangePokemon={setPokemon} onClickFunction={() => openModal()} />
+                  <Card pokemon={pokemon} key={pokemon.id} onChangePokemon={setPokemon} onClickFunction={() => openModal()} onSelectFunction={({ clickPokemon }: any) => ClickSelectPokemon({ clickPokemon })} />
                 )
               })}
             </div>
