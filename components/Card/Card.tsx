@@ -29,7 +29,7 @@ function GetPokemonImg(id: number) {
   return srcUrl;
 }
 
-export default function Card({ pokemon, onClickFunction, onChangePokemon, onSelectFunction }: any) {
+export default function Card({ pokemon, onClickFunction, onChangePokemon }: any) {
   if (!pokemon) {
     return null;
   }
@@ -55,8 +55,6 @@ export default function Card({ pokemon, onClickFunction, onChangePokemon, onSele
         </div>
         <div className={styles.cardImage}>
           <img src={GetPokemonImg(id)} alt={pokemonName} />
-        </div>
-        <div className={styles.cardSelect} onClick={(e) => { onSelectFunction({ clickPokemon: pokemon }); e.stopPropagation(); }}>
         </div>
       </div>
     </>

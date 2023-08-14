@@ -58,18 +58,6 @@ export default function Pokedex() {
     setShowModal(true);
   }
 
-  function ClickSelectPokemon({ clickPokemon }: any) {
-    let nowSelectPokemons = selectPokemons;
-    let index = 0;
-    if (nowSelectPokemons[0] != undefined && nowSelectPokemons[1] == undefined) {
-      index = 1;
-    } else if (nowSelectPokemons[1] != undefined) {
-      console.log('滿了！！');
-    }
-    nowSelectPokemons[index] = clickPokemon;
-    setSelectPokemons(nowSelectPokemons);
-  }
-
   return (
     <>
       <Generations nowId={generationId} ReGetPokemonList={ReGetPokemonList} />
@@ -80,7 +68,7 @@ export default function Pokedex() {
             <div className={styles.cardArea}>
               {pokemons.map(function (pokemon) {
                 return (
-                  <Card pokemon={pokemon} key={pokemon.id} onChangePokemon={setPokemon} onClickFunction={() => openModal()} onSelectFunction={({ clickPokemon }: any) => ClickSelectPokemon({ clickPokemon })} />
+                  <Card pokemon={pokemon} key={pokemon.id} onChangePokemon={setPokemon} onClickFunction={() => openModal()} />
                 )
               })}
             </div>
